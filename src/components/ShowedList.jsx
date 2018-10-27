@@ -7,7 +7,7 @@ export default class ShowedList extends Component {
       return (
         <li key={i}>
           <div>{item}</div>
-          <button onClick={this.deletedTask.bind(item, i)}>Delete task</button>
+          <button onClick={this.props.dTask.bind(item, i)}>Delete task</button>
         </li>
       )
     });

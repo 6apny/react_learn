@@ -3,8 +3,9 @@ import { combineReducers } from 'redux';
 import mainReducer from './mainReducer'
 import secondReducer from './secondReducer'
 import dumbReducer from './dumbReducer'
+import TodoReducer from '../reducers/TodoReducer'
 
-const appReducer = combineReducers({ main: mainReducer, secondReducer, stupid: dumbReducer });
+const appReducer = combineReducers({ main: mainReducer, todo:TodoReducer, secondReducer, stupid: dumbReducer });
 
 const rootReducer = (state, action) => {
 

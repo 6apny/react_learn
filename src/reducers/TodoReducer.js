@@ -14,7 +14,7 @@ const todoReducer = (state = initState, action) => {
   }
 };
 
-const ADD_TASK = (state, action) => { return {...state, items: [...state.tasks, action.payload.task]} };
-const REMOVE_TASK = (state, action) => { return {...state.task.filter(item => item.id !== action.payload.id)} };
+const ADD_TASK = (state, action) => { return {...state, tasks: [...state.tasks, action.payload.task]} };
+const REMOVE_TASK = (state, action) => { return {...state.tasks.filter(item => item !== action.payload.taskId)} };
 
 export default todoReducer;

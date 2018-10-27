@@ -13,9 +13,9 @@ class TodoComponent extends Component {
 
   });
 
-  deletedTask = (dTask => {
+  deletedTask = (task => {
 
-    this.props.delTask(dTask);
+    this.props.delTask(task);
 
   });
 
@@ -25,7 +25,7 @@ class TodoComponent extends Component {
     return (
       <div>
         <TodoInput pushedTask={this.aTask} />
-        <ShowedList tasks={tasks} delItem={this.deletedTask} />
+        <ShowedList tasks={tasks} dTask={this.deletedTask} />
       </div>
     );
   }

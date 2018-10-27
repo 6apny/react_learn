@@ -8,17 +8,17 @@ export default class TodoInput extends Component {
     this.state = {inputValue: ''};
   }
 
-  getValue = (event) => {this.setState({task: event.target.value}); }
+  getValue = (event) => {this.setState({inputValue: event.target.value}); }
 
   pushTask = (event) => {
     event.preventDefault();
 
-    let task = event.target[0].value;
+    let task = event.target;
 
     if(task) {
-      this.props.pushedTask(task);
+      this.props.pushedTask(this.state.inputValue);
 
-      this.state.setState({inputValue: ''});
+      this.setState({inputValue: ''});
     }
   };
 
